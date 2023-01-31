@@ -46,9 +46,9 @@ app.get("/datasiswa", (req, res) => {
     })
 })
 
-app.get("/datasiswa/:id", (req, res) => {
+app.get("/datasiswa/:id_siswa", (req, res) => {
     let data = {
-        id_siswa: req.params.id
+        id_siswa: req.params.id_siswa
     }
     let sql = "select * from datasiswa where ?"
 
@@ -121,9 +121,9 @@ app.put("/datasiswa", (req, res) => {
     })
 })
 
-app.delete("/datasiswa/:id", (req, res) => {
+app.delete("/datasiswa/:id_siswa", (req, res) => {
     let data = {
-        id_siswa: req.params.id
+        id_siswa: req.params.id_siswa
     }
 
     let sql = "delete from datasiswa where ?"
@@ -164,9 +164,9 @@ app.get("/databuku", (req, res) => {
     })
 })
 
-app.get("/databuku/:id", (req, res) => {
+app.get("/databuku/:id_buku", (req, res) => {
     let data = {
-        id_buku: req.params.id
+        id_buku: req.params.id_buku
     }
     let sql = "select * from databuku where ?"
 
@@ -240,9 +240,9 @@ app.put("/databuku", (req, res) => {
     })
 })
 
-app.delete("/databuku/:id", (req, res) => {
+app.delete("/databuku/:id_buku", (req, res) => {
     let data = {
-        id_buku: req.params.id
+        id_buku: req.params.id_buku
     }
 
     let sql = "delete from databuku where ?"
